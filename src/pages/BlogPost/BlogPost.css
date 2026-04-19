@@ -1,0 +1,231 @@
+.blog-post-page {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.blog-post-container {
+  max-width: 800px;
+}
+
+.blog-post-article {
+  margin-top: 24px;
+}
+
+.blog-post-header {
+  margin-bottom: 32px;
+}
+
+.blog-post-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.blog-post-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.blog-post-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.blog-post-author-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.blog-post-author-info .author-avatar {
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+}
+
+.author-name {
+  display: block;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.author-email {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--accent-light);
+  margin-bottom: 2px;
+}
+
+.post-date {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.blog-post-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.action-btn:hover {
+  background: rgba(229, 62, 62, 0.1);
+  border-color: rgba(229, 62, 62, 0.3);
+  color: var(--accent-light);
+}
+
+.action-delete.visible {
+  background: rgba(229, 62, 62, 0.1);
+  border-color: rgba(229, 62, 62, 0.3);
+  color: var(--accent);
+}
+
+.action-delete.visible:hover {
+  background: var(--accent);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(229, 62, 62, 0.4);
+}
+
+.blog-post-cover {
+  margin-bottom: 32px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.blog-post-cover img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: 50% 25%;
+}
+
+.blog-post-content {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+}
+
+.blog-post-content h2,
+.blog-post-content h3 {
+  margin: 32px 0 16px;
+  color: var(--text-primary);
+}
+
+.blog-post-content p {
+  margin-bottom: 20px;
+}
+
+.blog-post-content img {
+  border-radius: var(--radius-md);
+  margin: 24px 0;
+}
+
+.blog-post-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 16px 24px;
+  margin: 24px 0;
+  background: rgba(229, 62, 62, 0.05);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-style: italic;
+  color: var(--text-primary);
+}
+
+.blog-post-content a {
+  color: var(--accent-light);
+  text-decoration: underline;
+}
+
+.blog-post-content ul, .blog-post-content ol {
+  padding-left: 24px;
+  margin-bottom: 20px;
+}
+
+.blog-post-content li {
+  margin-bottom: 8px;
+}
+
+/* Author Bio Section */
+.author-bio-section {
+  display: flex;
+  gap: 24px;
+  padding: 32px;
+  margin-top: 60px;
+  border-top: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-lg);
+}
+
+.author-avatar-large {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.author-bio-content h4 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.author-bio-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.author-bio-email {
+  font-size: 0.9rem;
+  color: var(--accent-light);
+  margin-bottom: 12px;
+}
+
+.author-bio-tagline {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .author-bio-section {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    align-items: center;
+    text-align: center;
+  }
+}
